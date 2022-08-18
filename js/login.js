@@ -13,6 +13,8 @@ function login (){
     }
 else
 {
+    localStorage.setItem('usuario',correo)
+    localStorage.setItem('contra',clave);
 location.href='index.html';
 }
 }

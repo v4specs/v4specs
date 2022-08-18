@@ -39,3 +39,13 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+document.addEventListener("DOMContentLoaded", () =>{
+
+  let usuario = localStorage.getItem("usuario");
+  let contraseña = localStorage.getItem("contra");
+
+  if (usuario == undefined || contraseña == undefined) {
+    location.href = "login.html"
+  }
+})
