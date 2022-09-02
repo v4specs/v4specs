@@ -28,10 +28,9 @@ function showCategoriesList(array){
     }
 }
 
-
-
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCTS_URL).then(function(resultObj){
+    let catID = localStorage.getItem("catID");
+    getJSONData(PRODUCTS_URL + catID + ".json").then(function(resultObj){
         if (resultObj.status === "ok")
         {
             categoriesArray = resultObj.data;
